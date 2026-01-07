@@ -257,7 +257,7 @@ ui <- fluidPage(
               "MENU"
           ),
           actionButton("dashboard_btn", "🏠  Dashboard", class = "sidebar-btn"),
-          actionButton("new_msg_btn", "✍  New Message", class = "sidebar-btn"),
+          actionButton("new_msg_btn", "✍  new Message", class = "sidebar-btn"),
           actionButton("view_all_btn", "📋  View All Messages", class = "sidebar-btn"),
           actionButton("released_btn", "🔓  Released Messages", class = "sidebar-btn"),
           actionButton("archives_btn", "🗄  Archives", class = "sidebar-btn"),
