@@ -139,7 +139,51 @@ ui <- fluidPage(
       @media (max-width: 768px) { .sidebar { width: 0px; } }
     "))
   ),
+<<<<<<< HEAD
   uiOutput("main_ui")
+=======
+  
+  shinyjs::useShinyjs(),
+  
+  div(id = "login-page",
+      div(class = "login-container",
+          div(class = "login-header",
+              h2("✨ Digital Legacy Keeper Portal"),
+              p("Secure access to your digital heritage", style = "font-style: italic; color: #6b7280;")
+          ),
+          div(class = "login-form",
+              textInput("username", "Username:", value = ""),
+              passwordInput("password", "Password:", value = ""),
+              checkboxInput("show_password", "Show Password", value = FALSE),
+              actionButton("login", "UNLOCK VAULT", class = "login-btn")
+          ),
+          div(class = "login-footer",
+              p("© 2025 Digital Legacy Keeper System"),
+              p("Rizza Constantino_BSIT 4-1", style = "font-weight: bold; color: #6b7280;")
+          )
+      )
+  ),
+  
+  div(id = "main-app", style = "display: none;",
+      div(class = "main-header",
+          "⏳ DIGITAL LEGACY KEEPER SYSTEM 🔐"
+      ),
+      div(class = "sidebar",
+          div(style = "color: pink; font-size: 16px; font-weight: bold; text-align: center; padding: 25px 0;",
+              "MENU"
+          ),
+          actionButton("dashboard_btn", "🏠  Dashboard", class = "sidebar-btn"),
+          actionButton("new_msg_btn", "✍  new Message", class = "sidebar-btn"),
+          actionButton("view_all_btn", "📋  View All Messages", class = "sidebar-btn"),
+          actionButton("released_btn", "🔓  Released Messages", class = "sidebar-btn"),
+          actionButton("archives_btn", "🗄  Archives", class = "sidebar-btn"),
+          actionButton("logout_btn", "🚪  Log Out", class = "sidebar-btn")
+      ),
+      div(class = "content-area",
+          uiOutput("main_content")
+      )
+  )
+>>>>>>> 6e9d621ea322af1afde4e1a000bf62180ca70126
 )
 
 # ---------------- SERVER ----------------
